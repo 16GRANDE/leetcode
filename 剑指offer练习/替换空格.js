@@ -24,6 +24,11 @@ function replaceEmpty1(str) {
     if (str[j] === " ") {
       result[i++] = "%";
       result[i++] = "2";
+      result[i++] = "0";
+    } else {
+      result[i++] = str[j++];
     }
   }
+
+  return result.join("");
 }
