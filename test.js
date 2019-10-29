@@ -43,5 +43,3 @@ var tilingRectangle = function(n, m) {
   return dfs(a, n, m, 170);
 };
 
-let str="fjhk"
-str.split("").re
