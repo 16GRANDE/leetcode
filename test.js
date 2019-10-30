@@ -43,3 +43,4 @@ var tilingRectangle = function(n, m) {
   return dfs(a, n, m, 170);
 };
 
+console.log(parseInt(5/2))
