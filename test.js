@@ -43,6 +43,7 @@ var tilingRectangle = function(n, m) {
   return dfs(a, n, m, 170);
 };
 
+<<<<<<< HEAD
 
 
 console.log(5>>1)
@@ -78,3 +79,25 @@ let s="jaflkjaslkf"
 let tmp=s.split("")
 tmp[3]=""
 console.log(tmp.join(""))
+=======
+console.log(parseInt(5/2))
+
+
+let n=2
+n /= 2
+console.log(n)
+
+var isPowerOfTwo = function(n) {
+  console.log(n&1)
+  console.log(n)
+  while(n&1===0){
+     
+      n /= 2
+      
+  }
+  console.log(n)
+  return n===1
+};
+
+isPowerOfTwo(2)
+>>>>>>> 10be706ae1a9525e181f76768b6537725f7c1818
