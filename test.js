@@ -94,3 +94,5 @@ var isPowerOfTwo = function(n) {
 };
 
 isPowerOfTwo(2)
+
+console.log(typeof ("9"-"0"))
