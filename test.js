@@ -50,16 +50,3 @@ let n=2
 n /= 2
 console.log(n)
 
-var isPowerOfTwo = function(n) {
-  console.log(n&1)
-  console.log(n)
-  while(n&1===0){
-     
-      n /= 2
-      
-  }
-  console.log(n)
-  return n===1
-};
-
-isPowerOfTwo(2)
