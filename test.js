@@ -43,10 +43,54 @@ var tilingRectangle = function(n, m) {
   return dfs(a, n, m, 170);
 };
 
-console.log(parseInt(5/2))
 
 
-let n=2
-n /= 2
-console.log(n)
+console.log(5>>1)
 
+var minRemoveToMakeValid = function(s) {
+  const t=[]
+  const t1=[]
+  
+  for(let i=0;i<s.length;i++){
+      
+      if(s[i]===")"&&t[t.length-1]==="("){
+          t.pop()
+          t1.pop()
+      }else if(s[i]==="("||s[i]===")"){
+          t.push(s[i])
+          t1.push(i)
+      }
+  }
+  console.log(t1)
+  let result=s.split("")
+  for(let i=0;i<t1.length;i++){
+      result.splice(t1[i],1)
+      console.log(result)
+  }
+  
+  return result.join("")
+};
+
+let r="))(("
+minRemoveToMakeValid(r)
+
+let s="jaflkjaslkf"
+let tmp=s.split("")
+tmp[3]=""
+console.log(tmp.join(""))
+
+
+
+var isPowerOfTwo = function(n) {
+  console.log(n&1)
+  console.log(n)
+  while(n&1===0){
+     
+      n /= 2
+      
+  }
+  console.log(n)
+  return n===1
+};
+
+isPowerOfTwo(2)
