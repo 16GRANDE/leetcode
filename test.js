@@ -95,4 +95,43 @@ var isPowerOfTwo = function(n) {
 
 isPowerOfTwo(2)
 
-console.log(typeof ("9"-"0"))
+var maxSumDivThree = function(nums) {
+  let sum=nums.reduce((acc,cur)=>acc+cur)
+  if(sum%3===0)
+      return sum
+  nums.sort((a,b)=>a-b)
+  
+  let t=0
+  for(let i=0;i<nums.length;++i){
+      if(i!=0)
+          t+=nums[i]
+      for(let j=i;j<nums.length;++j){
+          console.log(sum-t-nums[j],nums[j])
+          if((sum-t-nums[j])%3===0)
+              return sum-t-nums[j]
+      }
+  }
+  return 0
+};
+
+maxSumDivThree([2,6,2,2,7])
+
+
+var shiftGrid = function(grid, k) {
+  const n = grid.length;
+  const m = grid[0].length;
+  const gridAll = [];
+  for (let i = 0; i < n; i++) {
+      for (let j = 0; j < m; j++) {
+          gridAll.push(grid[i][j]);
+      }
+  }
+  const result = [];
+  for (let i = 0; i < n; i++) {
+      result.push([]);
+      for (let j = 0; j < m; j++) {
+          result[i].push(gridAll[(i * m + j + n * m - (k % (n * m))) % (n * m)]);
+      }
+  }
+  return result;
+};
